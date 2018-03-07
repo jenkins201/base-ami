@@ -1,0 +1,19 @@
+{
+  "variables": {
+    "aws_access_key": "{{ env `AWS_ACCESS_KEY` }}",
+    "aws_secret_key": "{{ env `AWS_SECRET_KEY` }}"
+  },
+  "builders": [{
+    "type": "amazon-ebs",
+    "access_key": "",
+    "secret_key": "",
+    "region": "eu-west-1",
+    "subnet_id": "subnet-663afa00",
+    "associate_public_ip_address": "true",
+    "source_ami": "ami-94b236ed",
+    "instance_type": "t2.micro",
+    "ssh_username": "ubuntu",
+    "ami_name": "packer {{timestamp}}"
+    }
+  ]
+}
