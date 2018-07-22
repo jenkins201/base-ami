@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'jenkins201/maven-docker:latest'
+            image 'jenkins201/maven-packer:latest'
             args '-v /root/.m2:/root/.m2 --network jenkinscontainer_default'
         }
     }
